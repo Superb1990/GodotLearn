@@ -26,10 +26,13 @@ color = Color(0.037099995, 0.4149901, 0.53, 1)
 z_index = 10
 
 [node name="MobTimer" type="Timer" parent="." unique_id=130807944]
+wait_time = 0.5
 
 [node name="ScoreTimer" type="Timer" parent="." unique_id=88570470]
 
 [node name="StartTimer" type="Timer" parent="." unique_id=298370149]
+wait_time = 2.0
+one_shot = true
 
 [node name="StartPosition" type="Marker2D" parent="." unique_id=1070362388]
 position = Vector2(240, 450)
@@ -38,6 +41,8 @@ position = Vector2(240, 450)
 curve = SubResource("Curve2D_lquwl")
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath" unique_id=1669638233]
+position = Vector2(32.417114, 0)
+progress = 32.42993
 
 [node name="HUD" parent="." unique_id=36515651 instance=ExtResource("1_h2yge")]
 

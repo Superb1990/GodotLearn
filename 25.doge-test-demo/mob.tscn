@@ -49,6 +49,8 @@ radius = 36.0
 height = 100.0
 
 [node name="Mob" type="RigidBody2D" unique_id=124889010 groups=["mobs"]]
+collision_mask = 0
+gravity_scale = 0.0
 script = ExtResource("1_1qmh0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=267435985]

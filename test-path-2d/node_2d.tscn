@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bg6d5bg6g8vc3"]
+
+[ext_resource type="Script" uid="uid://b0b5ug77tld4j" path="res://node_2d.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://cbc14aqlh5h13" path="res://icon.svg" id="1_wtcfe"]
+
+[sub_resource type="Curve2D" id="Curve2D_0e48y"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, -2, 0, 0, 0, 0, 745, 214, 0, 0, 0, 0, 1149, 642, 0, 0, 0, 0, 68, 637, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, -2)
+}
+point_count = 6
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
+
+[node name="Node2D" type="Node2D" unique_id=1956028203]
+script = ExtResource("1_0e48y")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1282877896]
+curve = SubResource("Curve2D_0e48y")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=373073730]
+position = Vector2(0, -2)
+rotation = 0.2821955
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1727577862]
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1603788954]
+scale = Vector2(0.34375003, 0.34375003)
+texture = ExtResource("1_wtcfe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1688439607]
+shape = SubResource("RectangleShape2D_0e48y")
